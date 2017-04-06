@@ -1,0 +1,76 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!-- # CUSTOM STYLES -->
+<link rel="import" href="visual-radio-fonts.html">
+<link rel="import" href="visual-radio-styles.html">
+
+<!--
+`visual-radio`
+Visual radio description
+
+@demo demo/index.html
+-->
+
+<dom-module id="visual-radio">
+  <template>
+    <style include="visual-radio-fonts"></style>
+    <style include="visual-radio-styles"></style>
+
+    <div id="visualRadioContainer" on-click="toggleRadio" on-tap="toggleRadio">
+      <template is="dom-if" if="{{radioImage}}">
+        <img src="{{radioImage}}" alt="">
+      </template>
+      <input type="radio">
+      <span>{{radioText}}</span>
+    </div>
+  </template>
+
+  <script>
+    class VisualRadio extends Polymer.Element {
+      static get is() {
+        return 'visual-radio';
+      }
+
+      static get properties() {
+        return {
+          selected:{
+            type: Boolean,
+          },
+          radioValue: {
+            type: String
+          },
+          radioImage: {
+            type: String
+          },
+          radioText: {
+            type: String
+          }
+        };
+      }
+
+      attributeChangedCallback(attributeName, oldValue, newValue) {
+        if (super.attributeChangedCallback) { super.attributeChangedCallback(attributeName, oldValue, newValue); }
+
+        var visualRadioItem = this.$.visualRadioContainer
+
+        if (attributeName === 'selected' && oldValue === null && newValue === '') {
+          visualRadioItem.classList.add('visual-radio-selected')
+        } else if (attributeName === 'selected' && oldValue === '' && newValue === null){
+          visualRadioItem.classList.remove('visual-radio-selected')
+        }
+      }
+
+      toggleRadio() {
+        var visualRadioItem = this.$.visualRadioContainer
+
+        if ( this.hasAttribute('selected') ) {
+          this.removeAttribute('selected')
+        }else {
+          this.setAttribute('selected', '')
+        }
+      }
+    }
+
+    window.customElements.define(VisualRadio.is, VisualRadio);
+  </script>
+</dom-module>
