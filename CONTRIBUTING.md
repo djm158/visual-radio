@@ -18,7 +18,7 @@ In order to develop it locally we suggest to use Polymer-CLI tool.
 4. Start development server $ polymer serve
 5. Open the demo/preview: http://127.0.0.1:8081/components/visual-radio/
 
-## Contributing ##
+## Contributing Pull Requests ##
 
 1. [Fork it!](https://help.github.com/articles/fork-a-repo/)
 2. [Configuring](https://help.github.com/articles/configuring-a-remote-for-a-fork/) a remote for a fork
