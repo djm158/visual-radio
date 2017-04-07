@@ -4,6 +4,9 @@
       :host {
         display: block;
         font-family: 'Open Sans', sans-serif;
+
+        --hover-color: #1CAFF6;
+        --hover-color-contrast: #FFFFFF;
       }
 
       /* # NORMAL STATE
@@ -14,6 +17,7 @@
         border-color: #EEEEEE;
         background-color: #FCFCFC;
         color: #999999;
+        color: var(--main-color);
         font-size: 16px;
         font-weight: 600;
         padding: 15px;
@@ -45,7 +49,7 @@
         position: relative;
         vertical-align: top;
         margin: 0 5px 0 0;
-        background: #fff;
+        background: #FFFFFF;
         -webkit-appearance: none;
         -webkit-border-radius: 100%;
         -moz-border-radius: 100%;
@@ -64,22 +68,22 @@
       /* # HOVER STATE
       ============================== */
       #visualRadioContainer:hover{
-        border-color: #1CAFF6;
+        border-color: var(--hover-color);
       }
       #visualRadioContainer:hover input[type=radio]{
-        border-color: #1CAFF6;
+        border-color: var(--hover-color);
       }
 
       /* # SELECTED STATE
       ============================== */
       #visualRadioContainer.visual-radio-selected{
-        background-color: #1CAFF6;
-        border-color: #1CAFF6;
-        color: #FFFFFF;
+        background-color: var(--hover-color);
+        border-color: var(--hover-color);
+        color: var(--hover-color-contrast);
       }
       #visualRadioContainer.visual-radio-selected input[type=radio] {
-        border-color: #FFFFFF;
-        background-color: #1CAFF6;
+        border-color: var(--hover-color-contrast);
+        background-color: var(--hover-color);
       }
       #visualRadioContainer.visual-radio-selected input[type=radio]:after {
         position: absolute;
@@ -88,7 +92,7 @@
         top: 3px;
         height: 10px;
         width: 10px;
-        background: #fff;
+        background: var(--hover-color-contrast);
         -webkit-border-radius: 100%;
         -moz-border-radius: 100%;
         border-radius: 100%;

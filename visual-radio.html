@@ -17,11 +17,11 @@ Visual radio description
     <style include="visual-radio-styles"></style>
 
     <div id="visualRadioContainer" on-click="toggleRadio" on-tap="toggleRadio">
-      <template is="dom-if" if="{{radioImage}}">
-        <img src="{{radioImage}}" alt="">
+      <template is="dom-if" if="{{image}}">
+        <img src="{{image}}" alt="">
       </template>
       <input type="radio">
-      <span>{{radioText}}</span>
+      <span>{{label}}</span>
     </div>
   </template>
 
@@ -36,27 +36,29 @@ Visual radio description
           selected:{
             type: Boolean,
           },
-          radioValue: {
+          value: {
             type: String
           },
-          radioImage: {
+          image: {
             type: String
           },
-          radioText: {
+          label: {
             type: String
           }
         };
       }
 
       attributeChangedCallback(attributeName, oldValue, newValue) {
-        if (super.attributeChangedCallback) { super.attributeChangedCallback(attributeName, oldValue, newValue); }
+        if (super.attributeChangedCallback) { super.attributeChangedCallback(attributeName, oldValue, newValue) }
 
         var visualRadioItem = this.$.visualRadioContainer
 
-        if (attributeName === 'selected' && oldValue === null && newValue === '') {
-          visualRadioItem.classList.add('visual-radio-selected')
-        } else if (attributeName === 'selected' && oldValue === '' && newValue === null){
-          visualRadioItem.classList.remove('visual-radio-selected')
+        if ( attributeName === 'selected') {
+          if (oldValue === null && newValue=== '') {
+            visualRadioItem.classList.add('visual-radio-selected')
+          }else{
+            visualRadioItem.classList.remove('visual-radio-selected')
+          }
         }
       }
 
