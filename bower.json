@@ -2,7 +2,7 @@
   "name": "visual-radio",
   "description": "Visual radio description",
   "main": "visual-radio.html",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD-2-Clause",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0-rc.2"
