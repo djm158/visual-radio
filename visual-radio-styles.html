@@ -17,7 +17,6 @@
         border-color: #EEEEEE;
         background-color: #FCFCFC;
         color: #999999;
-        color: var(--main-color);
         font-size: 16px;
         font-weight: 600;
         padding: 15px;
@@ -37,6 +36,7 @@
       #visualRadioContainer img{
         height: 135px;
         display: block;
+        margin: 0 auto;
         margin-bottom: 15px;
         -webkit-border-radius: 6px;
         -moz-border-radius: 6px;
@@ -96,6 +96,21 @@
         -webkit-border-radius: 100%;
         -moz-border-radius: 100%;
         border-radius: 100%;
+      }
+
+      /* # DISABLE STATE
+      ============================== */
+      #visualRadioContainer.visual-radio-disable,
+      #visualRadioContainer.visual-radio-disable:hover{
+        cursor: default;
+        background-color: #F5F5F5;
+        border-color: #EEEEEE;
+      }
+
+      #visualRadioContainer.visual-radio-disable img{
+        opacity: .2;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
       }
     </style>
   </template>

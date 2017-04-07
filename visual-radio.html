@@ -33,17 +33,20 @@ Visual radio description
 
       static get properties() {
         return {
-          selected:{
-            type: Boolean,
-          },
           value: {
+            type: String
+          },
+          label: {
             type: String
           },
           image: {
             type: String
           },
-          label: {
-            type: String
+          selected:{
+            type: Boolean,
+          },
+          disable: {
+            type: Boolean
           }
         };
       }
@@ -58,6 +61,14 @@ Visual radio description
             visualRadioItem.classList.add('visual-radio-selected')
           }else{
             visualRadioItem.classList.remove('visual-radio-selected')
+          }
+        }
+
+        if ( attributeName === 'disable') {
+          if (oldValue === null && newValue=== '') {
+            visualRadioItem.classList.add('visual-radio-disable')
+          }else{
+            visualRadioItem.classList.remove('visual-radio-disable')
           }
         }
       }

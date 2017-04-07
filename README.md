@@ -1,8 +1,6 @@
 # \<visual-radio\>
 
-> Visual radio  ** Not use in production  **
-
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square?style=flat-square)](https://www.webcomponents.org/element/miguelsmuller/visual-radio)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square?style=flat-square)](https://www.webcomponents.org/element/miguelsmuller/visual-radio) [![](https://img.shields.io/github/issues-raw/badges/shields.svg)](https://github.com/miguelsmuller/visual-radio) [![Bower](https://img.shields.io/bower/v/bootstrap.svg)](https://github.com/miguelsmuller/visual-radio)
 
 ## Install ##
 
